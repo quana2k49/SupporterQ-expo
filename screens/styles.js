@@ -1,53 +1,69 @@
-import { StyleSheet, Dimensions } from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native'
+const { height, width } = Dimensions.get('window')
 
 export default StyleSheet.create({
     container: {
-        alignItems: 'center',
-        flex: 1,
-        fontFamily: 'Montserrat',
-        justifyContent: 'center',
-        height: Dimensions.get('screen').height,
-        width: Dimensions.get('screen').width,
-    },
-    titleOpening: {
-        fontWeight: 'bold',
-        zIndex: 2,
+        backgroundColor: '#CDEAF8',
+        height: height,
+        width: width,
         position: 'absolute',
+        bottom: 0
     },
-    text0_titleOpening: {
-        fontSize: 30,
-        color: 'white',
-        marginVertical: 5,
+    text1: {
+        fontSize: 26,
         textAlign: 'center',
+        marginHorizontal: '10%',
+        fontWeight: 'bold'
     },
-    text1_titleOpening: {
+    text2: {
+        /* Body 1 Bold */
+        fontWeight: 'bold',
+        fontSize: 14,
+        lineHeight: 16,
+        color: '#313131',
+    },
+    text3: {
+        color: 'white',
         fontSize: 16,
-        color: 'white',
-        textAlign: 'center',
     },
-    titleStarting: {
+    text4: {
+        fontSize: 26,
+        color: 'white',
+
+    },
+    contentText: {
         position: 'absolute',
         zIndex: 1,
-        height: Dimensions.get('window').height,
-        width: Dimensions.get('window').width,
-    },
-    imageContainer: {
-        flex: 1,
+        justifyContent: 'center',
         alignItems: 'center',
-        height: Dimensions.get('window').height,
-        width: Dimensions.get('window').width,
-        justifyContent: 'center'
+        width: width,
+        height: height,
+        top: 0
     },
-    slideArrow: { height: 10, width: 20, marginRight: 10 },
-    scrollContainer: {
-        zIndex: 1, position: 'absolute',
-        flexDirection: 'row', alignItems: 'center',
+    arrowContainer: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        width: width,
         justifyContent: 'center',
     },
-    scrollContainer1: {
-        position: 'absolute',
-        bottom: '5%', flexDirection: 'row',
+    arrowContainer1: {
+        flexDirection: 'row',
         alignItems: 'center',
-        justifyContent: 'center'
+        width: width,
+        justifyContent: 'center',
+        bottom: '2%',
+        position: 'absolute',
+    },
+    arrow: {
+        height: height * 0.015,
+        width: width * 0.05,
+        marginHorizontal: 10,
+        marginVertical: 20
+    },
+    anmView: {
+        width: width,
+        height: height,
+        alignItems: 'center',
+        justifyContent: 'center',
     }
 });
