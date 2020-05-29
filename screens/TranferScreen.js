@@ -26,10 +26,7 @@ export default class Animated extends Component {
     _renderOpening = () => {
         const { height, width } = Dimensions.get('window');
 
-        return <View style={{
-            height: Dimensions.get('screen').height,
-            width: Dimensions.get('screen').width,
-        }}>
+        return <View style={styles.stepContainer}>
             <Animatable.View animation='fadeIn' delay={200}>
                 <View style={styles.contentText}>
                     <Text style={styles.text1}>Hãy tưởng tượng bạn đang đứng trước một chuyến đi du hành vòng quanh thế giới</Text>
@@ -45,10 +42,8 @@ export default class Animated extends Component {
 
     _renderVerify = () => {
         const { height, width } = Dimensions.get('window');
-        <View style={{
-            height: Dimensions.get('screen').height,
-            width: Dimensions.get('screen').width,
-        }}>
+        
+        return <View style={styles.stepContainer}>
             <Animatable.View animation='fadeIn' delay={850} style={{ position: 'absolute', zIndex: 1, height: height, width: width, alignItems: 'center' }}>
                 <View style={styles.arrowContainer1}>
                     <Image style={styles.arrow} source={require('../images/ScrollUp2.png')}></Image>
@@ -60,8 +55,8 @@ export default class Animated extends Component {
                 </View>
             </Animatable.View>
             <Animatable.View animation="fadeInUpBig" style={styles.anmView}>
-                <Image style={{ width: width, height: height, position: 'absolute', top: '10%' }} source={require('../images/BG2.png')} />
-                <Image style={{ width: width * 0.85, height: height * 0.14, position: 'absolute', bottom: '10%' }} source={require('../images/Step1.png')} />
+                <Image style={styles.sailBoat2} source={require('../images/BG2.png')} />
+                <Image style={styles.stepBar1} source={require('../images/Step1.png')} />
             </Animatable.View>
         </View>
     }

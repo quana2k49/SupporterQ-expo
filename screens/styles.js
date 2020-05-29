@@ -65,5 +65,11 @@ export default StyleSheet.create({
         height: height,
         alignItems: 'center',
         justifyContent: 'center',
-    }
+    },
+    stepContainer: {
+        height: Dimensions.get('screen').height,
+        width: Dimensions.get('screen').width,
+    },
+    sailBoat2: { width: width, height: height, position: 'absolute', top: '10%' },
+    stepBar1: { width: width * 0.85, height: height * 0.14, position: 'absolute', bottom: '10%' },
 });
