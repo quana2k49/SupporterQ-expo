@@ -18,6 +18,7 @@ export default class Animated extends Component {
         const { currentStep } = this.state;
         const scrollPos = event.nativeEvent.contentOffset.y;
         if (Platform.OS === 'ios' && scrollPos > 0 || Platform.OS === 'android' && scrollPos > 70) {
+            // this.refs._scrollView.scrollTo({ x: 0, y: 0, animated: false });
             switch (currentStep) {
                 case 0:
                     this.setState({
@@ -47,8 +48,8 @@ export default class Animated extends Component {
                 default:
                     break;
             }
+            console.log('currentStep', currentStep)
         }
-        console.log('currentStep', currentStep)
     };
 
     _renderOpening = () => {
@@ -98,7 +99,7 @@ export default class Animated extends Component {
         const obj = stepData[currentStep - 1];
 
         return <View style={styles.stepContainer}>
-            <Animatable.View animation='slideInUp' style={styles.anmView}>
+            <Animatable.View animation='zoomInUp' delay={850} style={styles.anmView}>
                 <Image style={styles.sailBoat2} source={obj.backgroundImg} />
                 <Image style={styles.stepBar1} source={obj.stepImg} />
             </Animatable.View>
@@ -144,7 +145,7 @@ export default class Animated extends Component {
         const obj = stepData[currentStep - 1];
 
         return <View style={styles.stepContainer}>
-            <Animatable.View animation='slideInUp' style={styles.anmView}>
+            <Animatable.View animation='zoomInUp' style={styles.anmView}>
                 <Image style={styles.sailBoat2} source={obj.backgroundImg} />
                 <Image style={styles.stepBar1} source={obj.stepImg} />
             </Animatable.View>
@@ -211,9 +212,10 @@ export default class Animated extends Component {
                 break;
         }
     }
+
     render() {
         return (
-            <ScrollView onScroll={this._onScroll} style={styles.container}>
+            <ScrollView ref='_scrollView' onScroll={this._onScroll} style={styles.container}>
                 {this._renderScreens()}
             </ScrollView>
         );

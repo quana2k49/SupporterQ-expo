@@ -24,7 +24,9 @@ export default StyleSheet.create({
     text3: {
         color: 'white',
         fontSize: 16,
-        textAlign: 'center'
+        textAlign: 'center',
+        marginHorizontal: 20
+
     },
     text4: {
         fontSize: 26,
