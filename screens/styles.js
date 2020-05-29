@@ -77,8 +77,8 @@ export default StyleSheet.create({
         top: '15%'
     },
     stepBar1: {
-        width: Platform.OS === 'ios' ? width * 0.9 : width * 0.9,
-        height: Platform.OS === 'ios' ? height * 0.17 : height * 0.15,
+        width: Platform.OS === 'ios' ? width * 0.85 : width * 0.85,
+        height: Platform.OS === 'ios' ? height * 0.16 : height * 0.15,
         position: 'absolute',
         bottom: '10%'
     }
