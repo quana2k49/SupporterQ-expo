@@ -1,4 +1,4 @@
-import { StyleSheet, Dimensions } from 'react-native'
+import { StyleSheet, Dimensions, Platform } from 'react-native'
 const { height, width } = Dimensions.get('window')
 
 export default StyleSheet.create({
@@ -16,7 +16,6 @@ export default StyleSheet.create({
         fontWeight: 'bold'
     },
     text2: {
-        /* Body 1 Bold */
         fontWeight: 'bold',
         fontSize: 14,
         lineHeight: 16,
@@ -25,11 +24,12 @@ export default StyleSheet.create({
     text3: {
         color: 'white',
         fontSize: 16,
+        textAlign: 'center'
     },
     text4: {
         fontSize: 26,
         color: 'white',
-
+        textAlign: 'center'
     },
     contentText: {
         position: 'absolute',
@@ -70,6 +70,16 @@ export default StyleSheet.create({
         height: Dimensions.get('screen').height,
         width: Dimensions.get('screen').width,
     },
-    sailBoat2: { width: width, height: height, position: 'absolute', top: '10%' },
-    stepBar1: { width: width * 0.85, height: height * 0.14, position: 'absolute', bottom: '10%' },
+    sailBoat2: {
+        width: width,
+        height: height,
+        position: 'absolute',
+        top: '15%'
+    },
+    stepBar1: {
+        width: Platform.OS === 'ios' ? width * 0.9 : width * 0.9,
+        height: Platform.OS === 'ios' ? height * 0.17 : height * 0.15,
+        position: 'absolute',
+        bottom: '10%'
+    }
 });

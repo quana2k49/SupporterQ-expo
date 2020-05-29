@@ -1,11 +1,11 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import Animated from './screens/screen1';
+import TranferScreen from './screens/TranferScreen';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Animated />
+      <TranferScreen />
     </View>
   );
 }
